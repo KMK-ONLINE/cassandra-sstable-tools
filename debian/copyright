@@ -1,0 +1,11 @@
+Upstream-Name: cassandra-sstable-tools
+Upstream-contact: Cameron Zemek <grom@zeminvaders.net>
+Source: https://github.com/instaclustr/cassandra-sstable-tools
+
+This software is licensed under the Apache License 2.0. On Debian
+GNU/Linux systems you can find the complete text of the Apache-2.0
+license in `/usr/share/common-licenses/Apache-2.0'.
+
+This package was debianized by
+Muhammad Hallaj bin Subery and Yap Sok Ann <pair+muhammad+yap@kmkonline.co.id>
+on Thu, 14 Dec 2017 17:45:44 +0700

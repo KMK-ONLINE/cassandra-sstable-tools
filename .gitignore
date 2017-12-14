@@ -14,3 +14,8 @@ hs_err_pid*
 # Build files
 src/com/instaclustr/sstabletools/cassandra
 cassandra
+
+# debian files
+dest
+debian/cassandra-sstable-tools.substvars
+debian/cassandra-sstable-tools/

@@ -1,0 +1,36 @@
+#!/usr/bin/make -f
+
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export CASSANDRA_VERSION=2.1.19
+
+clean:
+	ant clean
+	ant dist-clean
+	dh_clean
+
+build:
+	dh_testdir
+	ant -Dcassandra.version=${CASSANDRA_VERSION}
+
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+install:
+	dh_install dist/${CASSANDRA_VERSION}/ic-sstable-tools.jar \
+	  usr/share/cassandra/
+	dh_install bin/ic-cfstats usr/bin/
+	dh_install bin/ic-pstats usr/bin/
+	dh_install bin/ic-purge usr/bin/
+	dh_install bin/ic-sstables usr/bin/
+	dh_install bin/ic-summary usr/bin/
+
+binary: binary-indep
+.PHONY: build clean binary-indep binary-arch binary install

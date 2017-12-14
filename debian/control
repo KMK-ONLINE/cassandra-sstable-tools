@@ -1,0 +1,12 @@
+Source: cassandra-sstable-tools
+Section: misc
+Priority: optional
+Maintainer: Muhammad Hallaj bin Subery and Yap Sok Ann <pair+muhammad+yap@kmkonline.co.id>
+Build-Depends: debhelper (>= 8), ant
+Standards-Version: 3.9.3
+Homepage: https://github.com/instaclustr/cassandra-sstable-tools
+
+Package: cassandra-sstable-tools
+Architecture: all
+Depends: cassandra (= 2.1.19), ${misc:Depends}
+Description:  Tools for working with sstables
