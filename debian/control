@@ -8,5 +8,5 @@ Homepage: https://github.com/instaclustr/cassandra-sstable-tools
 
 Package: cassandra-sstable-tools
 Architecture: all
-Depends: cassandra (= 2.1.19), ${misc:Depends}
+Depends: cassandra (>= 2.1.19), cassandra (< 2.2), ${misc:Depends}
 Description:  Tools for working with sstables
